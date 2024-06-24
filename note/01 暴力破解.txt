@@ -1,0 +1,32 @@
+POST /login.php HTTP/1.1
+Host: shop.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+Origin: http://shop.com
+Connection: close
+Referer: http://shop.com/login.php
+Cookie: PHPSESSID=oi2o4r6ajmgj0t43vpb1i34mm7
+Upgrade-Insecure-Requests: 1
+Priority: u=1
+
+user=xiaoming&pwd=123456
+
+参考 0 1 2 3
+
+Invalid username!
+
+user 1. xiaohong 2. xiaohua 3. xiaohhei
+
+			payload       payload    payload       payload position     payload set
+
+user 1. zhou huajian 2. huajianzhou 3. huajian ...
+
+user huajian
+
+Invalid password!
+
+password 1. password 2. 123456 3. zxcvb

