@@ -1,0 +1,6 @@
+# Burp Suite 网站渗透测试 - 课程资料
+
+https://github.com/zhouhuajian-course/burp-suite-web-penetration-testing  
+https://gitee.com/zhouhuajian-course/burp-suite-web-penetration-testing
+
+
