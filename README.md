@@ -2,7 +2,7 @@
 
 ## 课程介绍
 
-Burp Suite Professional 自称宇宙第一网站渗透测试工具套件（The world's #1 web penetration testing toolkit）。功能强大，但入门相对较难。本课程以研究六种常见Web漏洞的方式，带大家入门 Burp Suite Professional。
+Burp Suite Professional 是一款 Web 渗透测试工具，功能强大，但入门相对较难。本课程以研究六种常见Web漏洞的方式，带大家入门 Burp Suite Professional。
 
 本课程涉及的Web漏洞有：
 - 暴力破解
